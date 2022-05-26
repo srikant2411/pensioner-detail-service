@@ -60,6 +60,12 @@ public class PensionerDetailsController {
 		return pensionerDetailService.getPensionerDetailByAadhaarNumber(aadhaarNumber);
 	}
 	
+	@GetMapping("/Hello")
+	public String HelloWorld() {
+		log.info("START ()");
+		return "<h1>Hello World</h1>";
+	}
+	
 	@GetMapping("/HealthCheck")
 	@ApiOperation(value = "healthCheck", notes = "Check whether microservice is up and running or not", httpMethod = "GET", response = String.class)
 	public ResponseEntity<String> healthCheck() {
