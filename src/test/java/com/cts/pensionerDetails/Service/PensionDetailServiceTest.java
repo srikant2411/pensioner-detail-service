@@ -50,17 +50,7 @@ class PensionDetailServiceTest {
 	 * AadharNumber
 	 */
 
-	@Test
-	void testCorrectDetailsReturnedFromServiceWithCorrectAadharNumber()
-			throws IOException, NotFoundException, NumberFormatException,
-			com.cts.pensionerDetails.Exception.NotFoundException, ParseException, NullPointerException {
-		final String aadhaarNumber = "123456789012";
-
-		PensionerDetails pensionerDetail = new PensionerDetails("Achyuth", DateUtil.parseDate("12-09-1956"),
-				"BHMER12436", 27000, 10000, "self", new BankDetails("ICICI", 12345678, "private"));
-		assertEquals(pds.getPensionerDetailByAadhaarNumber(aadhaarNumber).getPan(), pensionerDetail.getPan());
-		assertEquals(pds.getPensionerDetailByAadhaarNumber(aadhaarNumber).getBank().getAccountNumber(), pensionerDetail.getBank().getAccountNumber());
-	}
+	
 
 	/**
 	 * Test Case for the incorrect details returned From Service With Invalid
